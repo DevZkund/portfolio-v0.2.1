@@ -16,9 +16,9 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <a href="#portfolio" className="text-2xl font-bold flex items-center">
-          <span className="text-md items-center">Devzkund</span>
+          <img className='w-44' src='./images/logo.svg' alt='logo'/>
         </a>
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-6 text-md font-medium">
           <a href="#Portfolio" className="relative before:absolute before:-bottom-1 before:h-0.5 before:w-0 before:bg-primary before:transition-all before:duration-300 hover:before:w-full">Portfolio</a>
           <a href="#about" className="relative before:absolute before:-bottom-1 before:h-0.5 before:w-0 before:bg-primary before:transition-all before:duration-300 hover:before:w-full">About</a>
           <a href="#projects" className="relative before:absolute before:-bottom-1 before:h-0.5 before:w-0 before:bg-primary before:transition-all before:duration-300 hover:before:w-full">Projects</a>
