@@ -74,7 +74,7 @@ const Contact = () => {
             onChange={handleChange}
           ></textarea>
           <button
-            className="rounded-full border-grey-400 h-8 border cursor-pointer"
+            className="rounded-full border-grey-400 h-10 border cursor-pointer shadow-sm shadow-white bg-black text-center font-bold text-lg text-white "
             type="submit"
           >
             Send
