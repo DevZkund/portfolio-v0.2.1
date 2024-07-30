@@ -41,20 +41,20 @@ const About = () => {
         </div>
         <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-4">
           <div
-            className="bg-background rounded-lg shadow-lg mt-36 md:mt-36 lg:mt-0"
+            className="bg-background rounded-lg shadow-lg shadow-black/10 mt-36 md:mt-36 lg:mt-0 border-2 rounded-tl-[10rem]  "
             data-aos="zoom-in"
             data-aos-duration="3000"
             style={{ position: 'relative' }}
           >
             <img
-              src="./images/picr.png"
+              src="./images/pic.png"
               width="400"
               height="300"
               alt="Kundan Kumar"
               className="w-full h-auto object-center"
               style={{
-                aspectRatio: '300 / 300',
-                objectFit: 'contain',
+                aspectRatio: '271 / 300',
+                objectFit: 'cover',
                 position: 'absolute',
                 top: '20%',
                 left: '50%',
