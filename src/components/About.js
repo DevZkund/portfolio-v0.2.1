@@ -62,7 +62,7 @@ const About = () => {
               }}
             />
             <div className="p-4 mt-8" style={{ paddingTop: '200px' }}>
-              <h3 className="text-lg font-semibold">KUNDAN KUMAR</h3>
+              <h3 className="text-lg font-semibold pt-4 md:pt-0">KUNDAN KUMAR</h3>
               <p className="text-muted-foreground">Bihar, India</p>
               <p className="text-muted-foreground">devzkund@gmail.com</p>
             </div>
