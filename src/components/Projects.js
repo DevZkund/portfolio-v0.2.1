@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Projects = () => {
   return (
     <section className="py-24 bg-[#0B1A45] border-y border-[#1A2F50]" id="work">
@@ -11,15 +13,15 @@ const Projects = () => {
               Proven results in diverse industries.
             </p>
           </div>
-          <a
+          <Link
             className="text-primary font-bold hover:text-white transition-colors flex items-center gap-1 group"
-            href="#work"
+            to="/case-studies"
           >
             View All Case Studies{" "}
             <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
               arrow_forward
             </span>
-          </a>
+          </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Project Card 1 */}

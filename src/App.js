@@ -1,10 +1,8 @@
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Portfolio from "./components/Portfolio";
-import Projects from "./components/Projects";
-import Services from "./components/Services";
-import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import CaseStudies from "./pages/CaseStudies";
 import emailjs from "emailjs-com";
 import React from "react";
 import "aos/dist/aos.css";
@@ -17,21 +15,22 @@ function App() {
       once: false,
     });
   }, []);
-  
+
   emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
-  
+
   return (
-    <div className="flex flex-col min-h-screen bg-background-dark">
-      <Header />
-      <main className="flex-1">
-        <Portfolio />
-        <Services />
-        <Projects />
-        <Testimonials />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="flex flex-col min-h-screen bg-background-dark">
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
