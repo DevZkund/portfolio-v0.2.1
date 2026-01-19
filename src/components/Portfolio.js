@@ -1,60 +1,51 @@
-import React from 'react';
-import TypingAnimation from './TypingAnimation';
-
 const Portfolio = () => {
-  
   return (
-    <section
-      id="Portfolio"
-      data-aos="fade-down"
-      data-aos-duration="1200"
-      className="w-full pt-24 md:pt-32 lg:pt-40 bg-gradient-to-b from-background to-muted"
-    >
-      <div className="container lg:px-8 md:px-4 grid gap-8 md:grid-cols-2 items-center">
-        <div className="space-y-4">
-          <h1 className="text-2xl font-bold tracking-tighter lg:text-6xl md:text-4xl">
-            I'm a <TypingAnimation />
-          </h1>
-          <h1 className="text-2xl font-bold tracking-tighter lg:text-6xl md:text-4xl">
-            Developer
-          </h1>
-          <p className="max-w-[600px] text-muted-foreground md:text-md lg:text-lg text-sm">
-            I'm a passionate frontend developer with a keen eye for design
-            and a love for creating beautiful, responsive web applications.
-          </p>
+    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 blueprint-grid border-b border-[#1A2F50]" id="home">
+      {/* Decorative glowing gradient */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+      
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
+        <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-6">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          Available for New Projects
         </div>
-        <div
-          className="relative w-full max-w-md mx-auto"
-          data-aos="zoom-out"
-          data-aos-duration="3000"
-        >
-          <img
-            src="./images/about.png"
-            width="400"
-            height="400"
-            alt="Devzkund"
-            className="w-full h-auto rounded-full object-cover object-top shadow-lg"
-            style={{ aspectRatio: '400 / 400', objectFit: 'cover' }}
-          />
-          <div className="absolute -bottom-4 -right-4 bg-primary rounded-full w-12 h-12 flex items-center justify-center text-primary-foreground shadow-lg">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-6 h-6 text-yellow-400"
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-              <line x1="9" x2="9.01" y1="9" y2="9"></line>
-              <line x1="15" x2="15.01" y1="9" y2="9"></line>
-            </svg>
-          </div>
+        
+        <h1 className="mx-auto max-w-4xl text-5xl font-bold tracking-tight text-white sm:text-7xl mb-6 leading-[1.1]">
+          Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white">Scalable Solutions</span><br /> for Your Business
+        </h1>
+        
+        <p className="mx-auto max-w-2xl text-lg leading-8 text-text-muted mb-10">
+          Senior Full-Stack Developer specializing in high-performance SaaS architecture and secure enterprise web applications. I turn complex requirements into reliable code.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a className="w-full sm:w-auto flex items-center justify-center rounded-lg bg-primary px-8 py-3.5 text-base font-bold text-background-dark hover:bg-white transition-all shadow-lg shadow-primary/20" href="#work">
+            View My Work
+          </a>
+          <a className="w-full sm:w-auto flex items-center justify-center rounded-lg border border-[#395156] bg-transparent px-8 py-3.5 text-base font-bold text-white hover:border-primary hover:text-primary transition-all" href="#contact">
+            Contact for a Quote
+          </a>
+        </div>
+        
+        <div className="mt-16 pt-8 border-t border-[#1A2F50]/50 flex flex-wrap justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+          <span className="text-xl font-bold text-white flex items-center gap-2">
+            <span className="material-symbols-outlined">code</span> React
+          </span>
+          <span className="text-xl font-bold text-white flex items-center gap-2">
+            <span className="material-symbols-outlined">database</span> PostgreSQL
+          </span>
+          <span className="text-xl font-bold text-white flex items-center gap-2">
+            <span className="material-symbols-outlined">cloud</span> AWS
+          </span>
+          <span className="text-xl font-bold text-white flex items-center gap-2">
+            <span className="material-symbols-outlined">terminal</span> Node.js
+          </span>
+          <span className="text-xl font-bold text-white flex items-center gap-2">
+            <span className="material-symbols-outlined">api</span> GraphQL
+          </span>
         </div>
       </div>
     </section>

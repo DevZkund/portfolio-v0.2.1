@@ -1,69 +1,113 @@
-import React, { useEffect, useState } from "react";
-import { db, collection, getDocs } from "../firebase";
-
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, "projects"));
-        const projectsList = querySnapshot.docs.map((doc) => doc.data());
-        setProjects(projectsList);
-      } catch (error) {
-        console.error("Error fetching projects: ", error);
-      }
-    };
-
-    fetchProjects();
-  }, []);
-
   return (
-    <section
-      id="projects"
-      className="w-full pt-12 md:pt-24 lg:pt-48"
-      data-aos="fade-up"
-      data-aos-duration="800"
-    >
-      <div className="container px-4 md:px-6 space-y-8">
-        <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
-            My Projects
-          </h2>
-          <p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl">
-            Check out some of the projects I've worked on and the technologies I
-            used to bring them to life.
-          </p>
+    <section className="py-24 bg-[#0B1A45] border-y border-[#1A2F50]" id="work">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Featured Projects
+            </h2>
+            <p className="mt-2 text-text-muted">
+              Proven results in diverse industries.
+            </p>
+          </div>
+          <a
+            className="text-primary font-bold hover:text-white transition-colors flex items-center gap-1 group"
+            href="#work"
+          >
+            View All Case Studies{" "}
+            <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
+              arrow_forward
+            </span>
+          </a>
         </div>
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          id="DBProjects"
-        >
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              data-aos="zoom-in"
-              data-aos-duration="3000"
-              className="bg-background rounded-lg shadow-lg overflow-hidden group"
-            >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Project Card 1 */}
+          <a
+            href="https://taxhelpdesk.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col overflow-hidden rounded-lg border border-[#395156] bg-surface-dark hover:border-primary/50 transition-all hover:-translate-y-1 duration-300"
+          >
+            <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-800">
+              <div className="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent opacity-60"></div>
               <img
-                src={project.imageURL}
-                width="400"
-                height="300"
-                alt={project.title}
-                className="w-full h-auto object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                style={{ aspectRatio: "400 / 300", objectFit: "cover" }}
+                alt="TaxHelpDesk"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                src="/images/taxhelpdesks.png"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold group-hover:text-primary transition-colors duration-300 md:text-md">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground group-hover:text-muted-foreground/80 transition-colors duration-300 md:text-sm lg:text-lg">
-                  {project.description}
-                </p>
+            </div>
+            <div className="flex flex-1 flex-col p-8">
+              <div className="mb-4 flex items-center justify-between">
+                <span className="text-xs font-bold uppercase tracking-wider text-primary">
+                  FinTech / Legal
+                </span>
+                <span className="rounded bg-background-dark px-2 py-1 text-xs text-text-muted border border-[#395156]">
+                  Live Project
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                TaxHelpDesk
+              </h3>
+              <p className="mb-6 flex-1 text-text-muted">
+                A comprehensive platform for tax and legal assistance, providing
+                expert advice and services to individuals and businesses.
+              </p>
+              <div className="grid grid-cols-2 gap-4 border-t border-[#395156] pt-6">
+                <div>
+                  <p className="text-xs text-text-muted uppercase">Status</p>
+                  <p className="text-xl font-bold text-white">Production</p>
+                </div>
+                <div>
+                  <p className="text-xs text-text-muted uppercase">Sector</p>
+                  <p className="text-xl font-bold text-white">Services</p>
+                </div>
               </div>
             </div>
-          ))}
+          </a>
+          {/* Project Card 2 */}
+          <a
+            href="https://isomeds.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col overflow-hidden rounded-lg border border-[#395156] bg-surface-dark hover:border-primary/50 transition-all hover:-translate-y-1 duration-300"
+          >
+            <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-800">
+              <div className="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent opacity-60"></div>
+              <img
+                alt="Isomeds"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                src="images/isomeds.png"
+              />
+            </div>
+            <div className="flex flex-1 flex-col p-8">
+              <div className="mb-4 flex items-center justify-between">
+                <span className="text-xs font-bold uppercase tracking-wider text-primary">
+                  Healthcare
+                </span>
+                <span className="rounded bg-background-dark px-2 py-1 text-xs text-text-muted border border-[#395156]">
+                  Live Project
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                Isomeds
+              </h3>
+              <p className="mb-6 flex-1 text-text-muted">
+                An innovative healthcare platform designed to streamline medical
+                services and healthcare management.
+              </p>
+              <div className="grid grid-cols-2 gap-4 border-t border-[#395156] pt-6">
+                <div>
+                  <p className="text-xs text-text-muted uppercase">Status</p>
+                  <p className="text-xl font-bold text-white">Production</p>
+                </div>
+                <div>
+                  <p className="text-xs text-text-muted uppercase">Sector</p>
+                  <p className="text-xl font-bold text-white">HealthCare</p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
